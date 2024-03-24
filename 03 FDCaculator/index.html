@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FD Caculator</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+  <body
+    class="h-screen w-screen flex flex-col justify-center items-center bg-gray-200"
+  >
+    <div
+      class="bg-white p-5 flex flex-col space-y-5 rounded shadow min-w-[300px]"
+    >
+      <p class="mx-auto">FD Calculator</p>
+      <div>
+        <label for="amount" class="block mb-2 text-sm font-medium text-gray-900"
+          >Amount</label
+        >
+        <input
+          type="text"
+          id="amount"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Ex. 200"
+          required
+        />
+      </div>
+
+      <div>
+        <label
+          for="interest"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Interest (%)</label
+        >
+        <input
+          type="number"
+          id="interest"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Ex. 2"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="years" class="block mb-2 text-sm font-medium text-gray-900"
+          >Years</label
+        >
+        <input
+          type="number"
+          id="years"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Ex. 4"
+          required
+        />
+      </div>
+
+      <p id="error" class="text-red-500 mx-auto"></p>
+
+      <button id="calculate" class="bg-blue-500 p-3 rounded shadow text-white">
+        Calculate
+      </button>
+
+      <p id="result"></p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
